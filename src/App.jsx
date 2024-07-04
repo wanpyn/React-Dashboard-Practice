@@ -1,9 +1,13 @@
-import Nav from "./Nav";
+import Dashboard from "./Dashboard";
+import { useState } from "react";
+import Sidebar from "./Sidebar";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <Nav />
+      <Dashboard isOpen={!isOpen} setIsOpen={setIsOpen} />
+      <Sidebar isOpen={isOpen} />
     </>
   );
 }
