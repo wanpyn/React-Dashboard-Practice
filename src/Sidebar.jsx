@@ -21,24 +21,26 @@ const Sidebar = ({ isOpen }) => {
             </Avatar>
             <span className="text-xs "> Welcome</span> <span>Ally Krex</span>
           </li>
-          <li>
-            <BsBoxFill />
-            Dashboard
+          <li className="rounded hover:shadow hover:bg-blue-500">
+            <a href="">
+              <BsBoxFill className="inline-block" />
+              Dashboard
+            </a>
           </li>
           <li>
-            <MdDashboard />
+            <MdDashboard className="inline-block" />
             Forms
           </li>
           <li>
-            <PiListBulletsFill />
+            <PiListBulletsFill className="inline-block" />
             UI Elements
           </li>
           <li>
-            <FaChartPie />
+            <FaChartPie className="inline-block" />
             Charts
           </li>
           <li>
-            <FaBorderAll />
+            <FaBorderAll className="inline-block" />
             Tables
           </li>
         </ul>

@@ -17,7 +17,9 @@ const Nav = ({ isOpen, setIsOpen }) => {
         />
         <h1 className="flex items-center flex-1 bg-sky-blue text-xs semibold pl-4  text-light-green  font-semibold">
           CODING MARKET
-          <FaUserAlt className="absolute right-5 cursor-pointer text-dark-green text-sm" />
+          <button className="absolute right-5 cursor-pointer text-dark-green text-sm">
+            <FaUserAlt />
+          </button>
           <DropDownMenu />
         </h1>
       </nav>
