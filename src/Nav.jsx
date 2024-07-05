@@ -12,7 +12,7 @@ const Nav = ({ isOpen, setIsOpen }) => {
     <>
       <nav className="flex font-roboto ">
         <CgMenuLeft
-          className=" bg-dark-green text-white text-4xl w-20 items-center pt-1 cursor-pointer"
+          className=" bg-dark-green text-white text-5xl w-20 items-center pt-2 cursor-pointer"
           onClick={() => ToggleMenuHandle(isOpen)}
         />
         <h1 className="flex items-center flex-1 bg-sky-blue text-xs semibold pl-4  text-light-green  font-semibold">

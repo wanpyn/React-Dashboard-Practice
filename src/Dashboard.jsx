@@ -4,7 +4,7 @@ import Nav from "./Nav";
 const Dashboard = ({ isOpen, setIsOpen }) => {
   return (
     <>
-      <div className={`${isOpen ? "" : ""} w-full`}>
+      <div className={`${isOpen ? "" : ""} `}>
         <Nav isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
     </>
