@@ -6,12 +6,18 @@ import { FaBorderAll } from "react-icons/fa6";
 import { MdDashboard } from "react-icons/md";
 
 const Sidebar = ({ isOpen }) => {
+  const Menus = [
+    { title: "Dashboard", icon: <BsBoxFill /> },
+    { title: "Forms", icon: <MdDashboard /> },
+    { title: "UI Elements", icon: <PiListBulletsFill /> },
+    { title: "Charts", icon: <FaChartPie /> },
+    { title: "Tables", icon: <FaBorderAll /> },
+  ];
   return (
     <section>
       <div
-        className={`font-roboto bg-dark-green h-screen pt-5 w-40 ${
-          isOpen ? "w-40" : "w-14"
-        } duration-500 p-4 text-lg `}
+        className={`font-roboto bg-dark-green h-screen pt-5 w-40
+           ${isOpen ? "w-44" : "w-20"} duration-5 00 p-4 text-lg  `}
       >
         <ul className=" text-white cursor-pointer">
           <li className="flex">
@@ -21,28 +27,24 @@ const Sidebar = ({ isOpen }) => {
             </Avatar>
             <span className="text-xs "> Welcome</span> <span>Ally Krex</span>
           </li>
-          <li className="rounded hover:shadow hover:bg-blue-500">
-            <a href="">
-              <BsBoxFill className="inline-block" />
-              Dashboard
-            </a>
-          </li>
-          <li>
-            <MdDashboard className="inline-block" />
-            Forms
-          </li>
-          <li>
-            <PiListBulletsFill className="inline-block" />
-            UI Elements
-          </li>
-          <li>
-            <FaChartPie className="inline-block" />
-            Charts
-          </li>
-          <li>
-            <FaBorderAll className="inline-block" />
-            Tables
-          </li>
+          {Menus.map((menu, index) => {
+            return (
+              <li
+                key={index}
+                className="text-white text-base flex items-center  p-2 hover:bg-white 
+                 hover:text-dark-green"
+              >
+                <span className="text-lg pr-3 ">{menu.icon}</span>
+                <span
+                  className={`text-sm flex-1 duration-700 font-sans ${
+                    !isOpen && "hidden"
+                  }`}
+                >
+                  {menu.title}
+                </span>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </section>
