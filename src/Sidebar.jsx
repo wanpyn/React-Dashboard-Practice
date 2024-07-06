@@ -16,13 +16,12 @@ const Sidebar = ({ isOpen }) => {
   return (
     <section>
       <div
-        className={`font-roboto bg-dark-green h-screen pt-8 w-40
-           ${isOpen ? "w-44" : "w-20"} duration-500 p-4 text-lg  `}
+        className={`font-roboto bg-dark-green h-screen pt-8 
+           ${isOpen ? "w-40" : "w-16"} duration-500  text-lg relative `}
       >
-        <ul className=" text-white cursor-pointer">
+        <ul className=" text-white cursor-pointer absolute">
           <li
-            className={`inline-flex ${
-              isOpen && "rotate-[360deg] hover:bg-white hover:text-dark-green"
+            className={`inline-flex pb-3 pl-2
             }`}
           >
             <Avatar className="w-8">
@@ -30,9 +29,9 @@ const Sidebar = ({ isOpen }) => {
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
             <span
-              className={`text-xs duration-300 pl-2  ${!isOpen && "scale-0"}  ${
-                isOpen && ""
-              }`}
+              className={`text-xs duration-300 pl-2 text-sky-blue  ${
+                !isOpen && "scale-0"
+              }  ${isOpen && ""}`}
             >
               Welcome
             </span>
@@ -48,12 +47,12 @@ const Sidebar = ({ isOpen }) => {
             return (
               <li
                 key={index}
-                className="text-white inline-flex text-base items-center  p-4 hover:bg-white 
-                 hover:text-dark-green"
+                className="text-white inline-flex pt-3 pb-4 pl-3 text-base items-center w-full  hover:bg-white 
+                 hover:text-dark-green "
               >
-                <span className="text-lg pr-9 ">{menu.icon}</span>
+                <span className="text-xl ">{menu.icon}</span>
                 <span
-                  className={`text-sm flex-1 duration-700 font-sans ${
+                  className={`text-sm pl-4 duration-300 font-sans ${
                     !isOpen && "scale-0"
                   }`}
                 >
