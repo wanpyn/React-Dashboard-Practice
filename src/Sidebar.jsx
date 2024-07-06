@@ -21,27 +21,30 @@ const Sidebar = ({ isOpen }) => {
       >
         <ul className=" text-white cursor-pointer absolute">
           <li
-            className={`inline-flex pb-3 pl-2
+            className={`flex pb-3 pl-2
             }`}
           >
             <Avatar className="w-8">
               <AvatarImage src="https://github.com/shadcn.png" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
-            <span
-              className={`text-xs duration-300 pl-2 text-sky-blue  ${
-                !isOpen && "scale-0"
-              }  ${isOpen && ""}`}
-            >
-              Welcome
-            </span>
-            <span
-              className={`text-xs duration-300 ${!isOpen && "scale-0"} ${
-                isOpen && ""
-              }`}
-            >
-              Ally Krex
-            </span>
+            <div className="flex flex-col">
+              {" "}
+              <span
+                className={`text-xs duration-500 pl-2 text-sky-blue ${
+                  !isOpen && "scale-0 whitespace-nowrap"
+                }`}
+              >
+                Welcome
+              </span>
+              <span
+                className={`text-sm pl-2 duration-500  ${
+                  !isOpen && "scale-0 whitespace-nowrap"
+                } `}
+              >
+                Ally Krex
+              </span>
+            </div>
           </li>
           {Menus.map((menu, index) => {
             return (
@@ -50,9 +53,9 @@ const Sidebar = ({ isOpen }) => {
                 className="text-white inline-flex pt-3 pb-4 pl-3 text-base items-center w-full  hover:bg-white 
                  hover:text-dark-green "
               >
-                <span className="text-xl ">{menu.icon}</span>
+                <span className="text-xl">{menu.icon}</span>
                 <span
-                  className={`text-sm pl-4 duration-300 font-sans ${
+                  className={`text-sm pl-4 duration-500 font-sans whitespace-nowrap flex-1 ${
                     !isOpen && "scale-0"
                   }`}
                 >
