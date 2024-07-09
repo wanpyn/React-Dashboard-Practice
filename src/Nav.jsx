@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CgMenuLeft } from "react-icons/cg";
 import { FaUserAlt } from "react-icons/fa";
 import DropDownMenu from "./DropDownMenu";
@@ -20,6 +20,11 @@ const Nav = ({ isOpen, setIsOpen }) => {
         className="text-white text-5xl w-16 items-center pt-2 cursor-pointer"
         onClick={toggleMenuHandle}
       />
+      {useEffect(() => {
+        {
+          onclick = { toggleMenuHandle };
+        }
+      }, [toggleMenuHandle])}
       <h1 className="flex items-center flex-1 bg-sky-blue text-xs semibold pl-4 text-light-green font-semibold">
         CODING MARKET
         <button
